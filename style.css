@@ -1,0 +1,256 @@
+/* Reset básico para eliminar espaços indesejados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #BDD2B6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #40513B;
+}
+
+/* Tipografia geral */
+
+h1, h2, h3 {
+    color: #40513B;
+    font-family: "Times New Roman", serif;
+}
+
+p {
+    color: #40513B;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: #2B2B2B;
+    text-decoration: none; /* Tiras as underlines dos links */
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Cabeçalho Fixo */
+.header {
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background-color: #BDD2B6;
+}
+
+/* Sombra ativada via JS ao rolar */
+.header.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Ajuste do Logo no Cabeçalho */
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+/* Menu de Navegação */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Altera o espaçamento entre os links */
+}
+
+.nav-link {
+    color: #40513B;
+    font-weight: 700; /* Altera a largura da fonte */
+    font-size: 0.95rem; /* Altera o tamanho da fonte */
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.nav-link:hover {
+    color: #2B2B2B;
+    text-decoration: underline;
+}
+
+/* Botão Destacado "FALE CONOSCO" */
+.btn-cta {
+    color: #FFF5E4;
+    background-color: #40513B;
+    padding: 0.7rem 1.4rem; /* Deixa a caixa mais definida */
+    border-radius: 25px; /* Deixa a borda da caixa arrendodada */
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: #2B2B2B;
+    transform: translateY(-2px); /* Move a caixa para cima ao colocar o cursor */
+}
+
+.form-card {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #FFF5E4;
+    padding: 2.5rem;  
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap; /* Impede que as opções de radio e checkbox saiam da tela em monitores menores ou celulares */
+}
+
+/* Ativa a grade de 2 colunas para os campos pareados */
+ .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide o espaço em 2 colunas iguais */
+    gap: 1rem; /* Espaço entre a coluna da esquerda e a da direita */
+}
+
+/* Responsividade: Volta para 1 coluna no celular */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr; /*  Apenas 1 coluna em telas menores que 600px */
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=number], input[type=date], select, textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #BDD2B6;
+    border-radius: 8px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+}
+
+/* Destaque visual ao clicar no campo */
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=number]:focus, input[type=date]:focus, select:focus, textarea:focus {
+    border-color: #40513B;
+}
+
+button[type=submit] {
+    background-color: #40513B;
+    color: #FFF5E4;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button[type=submit]:hover {
+    background-color: #2B2B2B;
+    transform: translateY(-2px);
+}
+
+/* Destaque para os rótulos das perguntas */ 
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Estilo para rótulos dentro de grupos (radio/checkbox) */
+.form-box label {
+    font-weight: 400;
+}
+
+/* Estilização do campo de upload de arquivos */
+input[type=file] {
+    padding: 0.4rem 0;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #40513B;
+    cursor: pointer;
+}
+/* Personaliza o botão do input file nos navegadores modernos */
+input[type=file]::file-selector-button {
+    background-color: #BDD2B6;
+    color: #40513B;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #a3be9c
+}
+
+/* Seção de abertura da página inicial */
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+}
+
+.hero-botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-botoes .btn-cta {
+    border: 2px solid #40513B;
+}
+
+.btn-secundario {
+    color: #40513B;
+    border: 2px solid #40513B;
+    padding: 0.7rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.btn-secundario:hover {
+    background-color: #40513B;
+    color: #FFF5E4;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

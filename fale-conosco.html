@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Detalhes Decorações e Paisagismo </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo"> 
+            <img src="detalhes.png" alt="Logo Detalhes Decorações e Paisagismo"/> 
+        </a>
+
+        <nav class="nav-menu">
+            <a href="quem-somos.html" class="nav-link"> QUEM SOMOS </a>
+            <a href="servicos.html" class="nav-link"> SERVIÇOS </a>
+            <a href="locacoes.html" class="nav-link"> LOCAÇÕES </a>
+            <a href="blog.html" class="nav-link"> BLOG </a>
+            <a href="contato.html" class="nav-link"> CONTATO </a>
+            <a href="fale-conosco.html" class="btn-cta"> FALE CONOSCO </a>
+        </nav>
+    </header>
+
+    
+
+    <div class="form-card">
+        <form action="" method="get">
+            <h2> Fale Conosco </h2>
+
+            <div class="form-row">
+                <div>
+                    <label for="nome"> Nome: </label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div>
+                    <label for="tel"> Telefone: </label>
+                    <input type="tel" name="tel" id="tel" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="Ex: (84) 99918-1758">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="email-1"> E-mail: </label>
+                    <input type="email" name="email" id="email-1">
+                </div>
+                <div>
+                    <label for="localizacao"> Localização: </label>
+                    <input type="text" name="localizacao" id="localizacao" placeholder="Ex: Barro Vermelho, Natal/RN.">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div>
+                    <label for="area"> Área aproximada (m²): </label>
+                    <input type="number" name="area" id="area" placeholder="Ex: 150">
+                </div>
+                <div>
+                    <label for="data"> Data do Evento ou Prazo Desejado: </label>
+                    <input type="date" name="data" id="data">
+                </div>
+            </div>
+
+            <label for="foco"> Foco de Atendimento: </label>
+            <select name="foco" id="foco">
+                <option value=""> Selecione um foco... </option>
+                <option value="projeto-paisagistico"> Projeto Paisagístico </option>
+                <option value="locação-de-moveis-ou-plantas"> Locação de Móveis/Plantas </option>
+                <option value="manutencao-ou-consultoria"> Manutenção ou Consultoria </option>
+                <option value="outros"> Outros </option>
+            </select>
+
+            <div class="form-box">
+                <div class="form-group">
+                    <p class="question-label"> O seu espaço é: </p>
+                </div>
+                <div class="options-row">
+                    <input type="radio" name="espaco" id="residencial">
+                    <label for="residencial"> Residencial </label>
+                    <input type="radio" name="espaco" id="comercial">
+                    <label for="comercial"> Comercial </label>
+                    <input type="radio" name="espaco" id="evento">
+                    <label for="evento"> Evento </label>
+                </div>
+            </div>
+
+            <label for="orcamento"> Faixa de Investimento Estimada: </label>
+            <select name="orcamento" id="orcamento">
+                <option value=""> Selecione uma faixa... </option>
+                <option value="ate-3k"> Até R$ 3.000 </option>
+                <option value="3k-8k"> R$ 3.000 a R$ 8.000</option>
+                <option value="8k-15k"> R$ 8.000 a R$ 15.000 </option>
+                <option value="acima-15k"> Acima de R$ 15.000</option>
+            </select>
+           
+            <label for="file"> Envie uma foto do espaço atual ou uma referência que deseja: </label>
+            <input type="file" name="file" id="file">
+
+            <div class="form-box">
+                <div class="form-group">
+                    <p class="question-label"> Prefere ser respondido por: </p>
+                </div>
+                <div class="options-row">
+                    <input type="checkbox" name="contato" id="whatsapp">
+                    <label for="whatsapp"> Whatsapp </label>
+                    <input type="checkbox" name="contato" id="email-2">
+                    <label for="email-2"> E-mail </label>
+                    <input type="checkbox" name="contato" id="ligacao">
+                    <label for="ligacao"> Ligação </label>
+                </div>
+                
+            </div>  
+
+            <label for="observacoes"> Observações: </label>
+            <textarea name="observacoes" id="observacoes"></textarea>
+
+            <button type="submit"> Enviar </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
