@@ -241,6 +241,67 @@ input[type=file]::file-selector-button:hover {
     color: #FFF5E4;
 }
 
+/* Seção Nossos trabalhos e carrossel */
+.trabalhos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    text-align: center;
+}
+
+.trabalhos h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.carrossel {
+    position: relative;
+}
+
+.carrossel-slides {
+    aspect-ratio: 16/9;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #FFF5E4;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(64, 81, 59, 0.8);
+    color: #FFF5E4;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.carrossel-btn:hover {
+    background-color: #40513B;
+}
+
+.anterior {
+    left: 1rem;
+}
+
+.proximo {
+    right: 1rem;
+}
+
 @media (max-width: 900px) {
     .header {
         flex-direction: column;
