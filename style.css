@@ -70,9 +70,9 @@ a {
     text-decoration: none; /* Remove sublinhado dos links */
 }
 
-.nav-link:hover {
-    color: #2B2B2B;
-    text-decoration: underline;
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #FFF5E4;
 }
 
 /* Botão Destacado "FALE CONOSCO" */
@@ -332,8 +332,9 @@ input[type=file]::file-selector-button:hover {
     color: #FFF5E4;
 }
 
-.rodape a:hover {
-    text-decoration: underline;
+.rodape a:hover,
+.rodape a:focus-visible {
+    color: #9DC08B;
 }
 
 .rodape-direitos {
