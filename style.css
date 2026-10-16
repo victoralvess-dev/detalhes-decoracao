@@ -302,6 +302,47 @@ input[type=file]::file-selector-button:hover {
     right: 1rem;
 }
 
+/* Rodapé */
+.rodape {
+    background-color: #40513B;
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+.rodape-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.rodape h3 {
+    color: #FFF5E4;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.rodape p {
+    color: #FFF5E4;
+}
+
+.rodape a {
+    color: #FFF5E4;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.rodape-direitos {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 245, 228, 0.3);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
 @media (max-width: 900px) {
     .header {
         flex-direction: column;
@@ -313,5 +354,10 @@ input[type=file]::file-selector-button:hover {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 }
