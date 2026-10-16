@@ -256,10 +256,12 @@ input[type=file]::file-selector-button:hover {
 
 .carrossel {
     position: relative;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .carrossel-slides {
-    aspect-ratio: 16/9;
+    aspect-ratio: 739 / 1600;
     border-radius: 25px;
     overflow: hidden;
     background-color: #FFF5E4;
