@@ -1,3 +1,7 @@
+:root {
+    --fundo: #FBF8F2;
+}
+
 /* Reset básico para eliminar espaços indesejados */
 * {
     margin: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-    background-color: #BDD2B6;
+    background-color: var(--fundo);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #40513B;
 }
@@ -39,7 +43,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 4rem;
-    background-color: #BDD2B6;
+    background-color: var(--fundo);
 }
 
 /* Sombra ativada via JS ao rolar */
@@ -96,7 +100,7 @@ a {
 .form-card {
     max-width: 600px;
     margin: 2rem auto;
-    background-color: #FFF5E4;
+    background-color: #FFFFFF;
     padding: 2.5rem;  
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -166,9 +170,23 @@ label {
     font-size: 0.95rem;
 }
 
+.question-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 /* Estilo para rótulos dentro de grupos (radio/checkbox) */
 .form-box label {
     font-weight: 400;
+}
+
+.options-row label {
+    margin-right: 1.2rem;
+}
+
+.options-row input[type=radio],
+.options-row input[type=checkbox] {
+    margin-right: 0.35rem;
 }
 
 /* Estilização do campo de upload de arquivos */
